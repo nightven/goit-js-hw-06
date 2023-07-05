@@ -15,9 +15,9 @@ function onClick(evt) {
   createBox(inputEl.value);
 }
 
-destroyBtn.addEventListener("click", onDestroy);
+destroyBtn.addEventListener("click", destroyBoxes);
 
-function onDestroy(evt) {
+function destroyBoxes(evt) {
   [...divBoxesEl.children].forEach((el) => el.remove());
   inputEl.value = "";
 }
