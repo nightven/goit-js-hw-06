@@ -18,12 +18,13 @@ function onClick(evt) {
 destroyBtn.addEventListener("click", destroyBoxes);
 
 function destroyBoxes(evt) {
-  [...divBoxesEl.children].forEach((el) => el.remove());
+  // [...divBoxesEl.children].forEach((el) => el.remove());
+  divBoxesEl.innerHTML = "";
   inputEl.value = "";
 }
 
 function createBox(amount) {
-  let side = 10;
+  let side = 30;
   const array = [];
   for (let i = 0; i < amount; i++) {
     const box = document.createElement("div");
