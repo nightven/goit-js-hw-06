@@ -5,14 +5,13 @@ function onSubmit(evt) {
   const { email, password } = evt.currentTarget.elements;
 
   //   console.log(email.value, password.value);
-  if (email.value === "" || password.value === "") {
-    alert("All fields must be filled in");
-  } else {
-    const userData = {
-      name: email.value,
-      password: password.value,
-    };
-    console.log(userData);
+  if (email.value.trim() === "" || password.value.trim() === "") {
+    return alert("All fields must be filled in");
   }
-  submitFormEL.reset();
+  const userData = {
+    name: email.value,
+    password: password.value,
+  };
+  console.log(userData);
+  evt.target.reset();
 }
